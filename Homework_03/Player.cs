@@ -13,7 +13,7 @@ namespace Homework_Skillbox_Module3
 
         public void Naming()
         {
-            Console.Write("Введите свое имя:");
+            Console.Write("Введите свое имя: ");
             PlayerName = Console.ReadLine();
         }
     }
