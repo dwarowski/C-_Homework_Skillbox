@@ -36,18 +36,20 @@ namespace Homework_Skillbox_Module3
 
                 if (gameNumber <= 0)
                 {
-                    Console.WriteLine($"{player1.PlayerName} победил");
+                    Console.WriteLine($"{player1.PlayerName} победил, еще разок?");
                     Console.ReadKey();
-                    break;
+                    Console.Clear();
+                    Main(args);
                 }
 
 
                 BotPlayer(gameNumber);
                 if (gameNumber <= 0)
                 {
-                    Console.WriteLine($"Bot win");
+                    Console.WriteLine($"Bot win, реванш?");
                     Console.ReadKey();
-                    break;
+                    Console.Clear();
+                    Main(args);
                 }
 
             }
