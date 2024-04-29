@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_Skillbox_Module2", "Homework_Skillbox_Module2\Homework_Skillbox_Module2.csproj", "{502C51DC-3083-4C28-9AB1-6B4CDD6A08B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_02", "Homework_Skillbox_Module2\Homework_02.csproj", "{502C51DC-3083-4C28-9AB1-6B4CDD6A08B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Theme_2", "Theme_2", "{7E036012-9781-403B-8763-6893278BFA46}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Theme_3", "Theme_3", "{1A9DD4D6-D369-44F2-8FA0-E2BED84AA407}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_Skillbox_Module3", "Homework_Skillbox_Module3\Homework_Skillbox_Module3.csproj", "{CE3D719F-52FE-464D-AAD0-55FEBA59F51D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_03", "Homework_Skillbox_Module3\Homework_03.csproj", "{CE3D719F-52FE-464D-AAD0-55FEBA59F51D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Theme_4", "Theme_4", "{8A2D1333-A5E9-4A12-A09C-486D85747152}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_04", "Homework_04\Homework_04.csproj", "{FAA46FC4-AFA0-4340-B077-EFD39058A219}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		{CE3D719F-52FE-464D-AAD0-55FEBA59F51D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE3D719F-52FE-464D-AAD0-55FEBA59F51D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE3D719F-52FE-464D-AAD0-55FEBA59F51D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA46FC4-AFA0-4340-B077-EFD39058A219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA46FC4-AFA0-4340-B077-EFD39058A219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA46FC4-AFA0-4340-B077-EFD39058A219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA46FC4-AFA0-4340-B077-EFD39058A219}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{502C51DC-3083-4C28-9AB1-6B4CDD6A08B0} = {7E036012-9781-403B-8763-6893278BFA46}
 		{CE3D719F-52FE-464D-AAD0-55FEBA59F51D} = {1A9DD4D6-D369-44F2-8FA0-E2BED84AA407}
+		{FAA46FC4-AFA0-4340-B077-EFD39058A219} = {8A2D1333-A5E9-4A12-A09C-486D85747152}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B2CA84D-308E-47CB-9C47-575981B7700F}
