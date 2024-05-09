@@ -8,7 +8,6 @@ namespace Homework_04
         {
             Random r = new Random();
             int[,] incomeAndOutcome = new int[12, 2];
-            //int[] worstEarn = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
             int[] worstEarn = new int[12];
             int[] earning = new int[12];
             int positiveEraning = 0;
