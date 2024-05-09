@@ -8,7 +8,8 @@ namespace Homework_04
         {
             Random r = new Random();
             int[,] incomeAndOutcome = new int[12, 2];
-            int[] worstEarn = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+            //int[] worstEarn = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+            int[] worstEarn = new int[12];
             int[] earning = new int[12];
             int positiveEraning = 0;
             
@@ -53,35 +54,22 @@ namespace Homework_04
                 
             void temp()
             {
-                
-                int currentMin = 1_000_000;
-                int currentMin1 = 1_000_000;
-                int currentMin2 = 1_000_000;
 
-                for (int i = 1; i < 12; i++)
-                {
-                    if (currentMin > earning[i])
+
+                int[] currentMin = new int[12];
+                currentMin[0] = 1_000_001;
+
+                for (int i = 0; i < 12; i++)
+                {    
+                    for (int j = 0; j < 12; j++)
                     {
-                        currentMin = earning[i];
-                        
-                        worstEarn[0] = i + 1;
-                        
-                    }
+                        if (currentMin[i] > earning[j] && j != worstEarn[i] - 1)
+                        {
+                            
+                            currentMin[i] = earning[j];
+                            worstEarn[i] = j + 1;
 
-                    if (currentMin1 > earning[i] && i != worstEarn[0] - 1)
-                    {
-                        currentMin1 = earning[i];
-
-                        worstEarn[1] = i + 1;
-
-                    }
-
-                    if (currentMin2 > earning[i] && i != worstEarn[0] - 1 && i != worstEarn[1] - 1 )
-                    {
-                        currentMin2 = earning[i];
-
-                        worstEarn[2] = i + 1;
-
+                        }
                     }
                 }
 
