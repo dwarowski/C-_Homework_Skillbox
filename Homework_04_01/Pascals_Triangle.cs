@@ -11,8 +11,8 @@ namespace Homework_04_01
         static void Main(string[] args)
         {
             Console.Write("Введите количество строк треугольника паскаля: ");
-            int N = int.Parse(Console.ReadLine());
-            int windowWidth = Console.WindowWidth / 2;
+            int N = int.Parse(Console.ReadLine());              // Ожидание ввода 
+            int windowWidth = Console.WindowWidth / 2;          // Ширина окна консоли 
 
             int[][] nums = new int[N + 1][];
 
