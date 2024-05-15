@@ -19,62 +19,62 @@ namespace Homework_Skillbox_Module3
             Console.Write("Введите максимальное число вычитания: ");
             int maxTurnMinus = Convert.ToInt32(Console.ReadLine());
 
-            Random random = new Random();
-            int gameNumber = random.Next(minGameNumber, maxGameNumber + 1);
+            Random random = new Random();  // Создание рандома
+            int gameNumber = random.Next(minGameNumber, maxGameNumber + 1);  // Установка финального значения игры
 
 
-            Player player1 = new Player();
+            Player player1 = new Player(); // Создание игрока 1
             
 
-            player1.Naming();
+            player1.Naming();   
            
 
-            while (gameNumber > 0)
+            while (gameNumber > 0)          // Индикатор конца игры
             {
                                   
-                UserTry(player1.PlayerName, gameNumber);
+                UserTry(player1.PlayerName, gameNumber);    // Ход игрока
 
-                if (gameNumber <= 0)
+                if (gameNumber <= 0)                // Проверка хода на победу
                 {
                     Console.WriteLine($"{player1.PlayerName} победил, еще разок?");
                     Console.ReadKey();
                     Console.Clear();
-                    Main(args);
+                    Main(args);         // Перезапуск программыы 
                 }
 
 
-                BotPlayer(gameNumber);
-                if (gameNumber <= 0)
+                BotPlayer(gameNumber);      // Ход Бота
+                if (gameNumber <= 0)        // Проверка хода на победу
                 {
                     Console.WriteLine($"Bot win, реванш?");
                     Console.ReadKey();
                     Console.Clear();
-                    Main(args);
+                    Main(args);         // Перезапуск программыы 
                 }
 
             }
 
-
-            void UserTry(string Name, int numberNow)
+           
+            void UserTry(string Name, int numberNow)       // Ход игрока
             {
-                Console.WriteLine($"Число: {numberNow},");
-                Console.Write($"Ход {Name}: ");
+                Console.WriteLine($"Число: {numberNow},");  // Вывод какое число сейчас
+                Console.Write($"Ход {Name}: ");             // Вывод как походит игрок
             
-                int userInt = int.Parse(Console.ReadLine());
+                int userInt = int.Parse(Console.ReadLine());      // Ожидаем ввод игрока 
 
-                if (userInt > 0 && userInt < maxTurnMinus + 1)
+                if (userInt > 0 && userInt < maxTurnMinus + 1)  // Условие сделать ход
                 {
-                    gameNumber = numberNow - userInt;
-                    
+                    gameNumber = numberNow - userInt;            // Применение хода 
+
                 }
             }        
 
-            void BotPlayer(int numberNow)
+            void BotPlayer(int numberNow)   // Ход бота
             {
-                Console.WriteLine($"Число: {numberNow},");
-                int botInt = random.Next(1, maxTurnMinus + 1);
-                Console.WriteLine($"Ход Бот: {botInt}");                
-                gameNumber = numberNow -  botInt;
+                Console.WriteLine($"Число: {numberNow},");          // Вывод какое число сейчас
+                int botInt = random.Next(1, maxTurnMinus + 1);      // Расчет хода 
+                Console.WriteLine($"Ход Бот: {botInt}");            // Вывод каким числом походил       
+                gameNumber = numberNow -  botInt;                   // Применение хода 
 
             }
         }

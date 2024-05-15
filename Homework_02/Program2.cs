@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
 
-            // Создание нового пользователя  и задаем параметры
+            // Создание нового пользователя и задаем параметры
             User user1 = new User
             {
                 Name = "Artemas",
@@ -19,7 +19,7 @@
             user1.PrintCommon();
             user1.PrintInterpolated();
             user1.PrintFormatted();
-            user1.PrintCentered();// Выводим 
+            user1.PrintCentered(); // Выводим 
             
         }
     }
