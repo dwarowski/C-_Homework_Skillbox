@@ -8,14 +8,10 @@ namespace Homework_04_02
 {
     internal class Matrix
     {
-        public int matrixRow { get; set; } = 0;
-        public int matrixColumn { get; set; } = 0;
 
-
-        int[,] matrix = new int[matrixRow];
-        public void MltiplyByNum(int num = 0)
+        public void MltiplyByNum(int matrixRow = 0, int matrixColumn = 0)
         {
-
+            int[,] matrix = new int[matrixRow, matrixColumn];
         }
     }
 }
