@@ -15,14 +15,15 @@ namespace Homework_04_02
             Console.WriteLine("2.");
             Console.WriteLine("3.");
             Console.WriteLine("4.");
-            Console.WriteLine("Для выбора, напишиите цифру нужного действия: ");
+            Console.Write("Для выбора, напишиите цифру нужного действия: ");
             int functionNum = int.Parse(Console.ReadLine());    // Читаем действие
+            Console.Clear();
 
             Matrix matrix = new Matrix();       // Создание новой матрицы
 
             if (functionNum == 1)
             {
-                matrix.MltiplyByNum();
+                matrix.MltiplyByNum();          // Умножение числа на матрицу       
             }
             if (functionNum == 2)
             {
