@@ -14,9 +14,9 @@ namespace Homework_04_02
 
             Console.WriteLine("Возможные действия:");
             Console.WriteLine("1. Умножить матрицу на число");
-            Console.WriteLine("2.");
-            Console.WriteLine("3.");
-            Console.WriteLine("4.");
+            Console.WriteLine("2. Сложить матрицу с матрицей");
+            Console.WriteLine("3. Вычесть матрицу из матрицы");
+            Console.WriteLine("4. Умножить матрицу с матрицей");
             Console.Write("Для выбора, напишиите цифру нужного действия: ");
 
             functionNum = int.Parse(Console.ReadLine());                // Читаем действие
@@ -41,6 +41,7 @@ namespace Homework_04_02
             }
             if (functionNum == 2)
             {
+                matrix.MatrixAddMatrix();
                 Main(args);
             }
             if (functionNum == 3)
