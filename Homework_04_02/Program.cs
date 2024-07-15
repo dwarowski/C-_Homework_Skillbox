@@ -41,11 +41,12 @@ namespace Homework_04_02
             }
             if (functionNum == 2)
             {
-                matrix.MatrixAddMatrix();
-                Main(args);
+                matrix.MatrixAddMatrix();       // Сложение двух матриц
+                Main(args);                     // Перезапуск              
             }
             if (functionNum == 3)
             {
+                matrix.MatrixSubMatrix();
                 Main(args);
             }
             if (functionNum == 4)
