@@ -51,6 +51,7 @@ namespace Homework_04_02
             }
             if (functionNum == 4)
             {
+                matrix.MatrixMultiplyMatrix();
                 Main(args);
             }
         }
