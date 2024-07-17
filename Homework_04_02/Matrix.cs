@@ -153,7 +153,9 @@ namespace Homework_04_02
             Console.Clear();
         }       
 
-
+        /// <summary>
+        /// Вычитание матриц
+        /// </summary>
         public void MatrixSubMatrix()
         {
             int matrixRow = 0;                                          // Число рядов первой матрицы
@@ -237,7 +239,9 @@ namespace Homework_04_02
         }
 
 
-
+        /// <summary>
+        /// Умножение матрицы на матрицу
+        /// </summary>
         public void MatrixMultiplyMatrix()
         {
 
