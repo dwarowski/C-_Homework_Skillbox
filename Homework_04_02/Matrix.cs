@@ -130,12 +130,12 @@ namespace Homework_04_02
 
             if (matrixColumn == matrixColumn1 && matrixRow == matrixRow1)
             {
-                for (int i = 0; i < matrixRow1; i++)                         // Перебор циклом кадого элемента матрицы
+                for (int i = 0; i < matrixRow; i++)                         // Перебор циклом кадого элемента матрицы
                 {
                     Console.SetCursorPosition((2 * matrixColumn) + matrixColumn + (2 * matrixColumn1) + matrixColumn1 + 12, i);      // Отступ матрицы в консоли
                     Console.Write("| ");
 
-                    for (int j = 0; j < matrixColumn1; j++)
+                    for (int j = 0; j < matrixColumn; j++)
                     {
                         matrixAdd[i,j] = matrix[i, j] + matrix1[i, j];
                         Console.Write($"{matrixAdd[i, j],4} ");                  // Выводим матрицу в консоль
@@ -174,7 +174,7 @@ namespace Homework_04_02
 
             int[,] matrix = new int[matrixRow, matrixColumn];            // Первая матрица пользователя 
             int[,] matrix1 = new int[matrixRow1, matrixColumn1];         // Вторая матрица пользователя 
-            int[,] matrixAdd = new int[matrixRow, matrixColumn];         // Матрица после сложения
+            int[,] matrixSub = new int[matrixRow, matrixColumn];         // Матрица после сложения
 
             Console.Clear();
 
@@ -212,15 +212,15 @@ namespace Homework_04_02
 
             if (matrixColumn == matrixColumn1 && matrixRow == matrixRow1)
             {
-                for (int i = 0; i < matrixRow1; i++)                         // Перебор циклом кадого элемента матрицы
+                for (int i = 0; i < matrixRow; i++)                         // Перебор циклом кадого элемента матрицы
                 {
                     Console.SetCursorPosition((2 * matrixColumn) + matrixColumn + (2 * matrixColumn1) + matrixColumn1 + 12, i);      // Отступ матрицы в консоли
                     Console.Write("| ");
 
-                    for (int j = 0; j < matrixColumn1; j++)
+                    for (int j = 0; j < matrixColumn; j++)
                     {
-                        matrixAdd[i, j] = matrix[i, j] - matrix1[i, j];
-                        Console.Write($"{matrixAdd[i, j],3} ");                  // Выводим матрицу в консоль
+                        matrixSub[i, j] = matrix[i, j] - matrix1[i, j];
+                        Console.Write($"{matrixSub[i, j],3} ");                  // Выводим матрицу в консоль
                     }
                     Console.Write("|");
                 }
@@ -298,14 +298,18 @@ namespace Homework_04_02
 
             if (matrixColumn == matrixRow1)
             {
-                for (int i = 0; i < matrixRow1; i++)                         // Перебор циклом кадого элемента матрицы
+                for (int i = 0; i < matrixRow; i++)                         // Перебор циклом кадого элемента матрицы
                 {
                     Console.SetCursorPosition((2 * matrixColumn) + matrixColumn + (2 * matrixColumn1) + matrixColumn1 + 12, i);      // Отступ матрицы в консоли
                     Console.Write("| ");
 
                     for (int j = 0; j < matrixColumn1; j++)
                     {
-                        matrixMul[i, j] = (matrix[i, j] * matrix1[i, j]) + (matrix[i,j] * matrix1[i,j]);
+                        
+                        for (int k = 0; k < matrixColumn; k++)
+                        {
+                            matrixMul[i, j] += matrix[i, k] * matrix1[k, j];     
+                        }
                         Console.Write($"{matrixMul[i, j],3} ");                  // Выводим матрицу в консоль
                     }
                     Console.Write("|");
