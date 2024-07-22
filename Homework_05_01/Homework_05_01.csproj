@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4EB5A87B-67C6-4D37-9EAA-6B9A991B9E4C}</ProjectGuid>
+    <ProjectGuid>{93628CCE-7B5B-445C-8803-650F26A5AAE7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Homework_05</RootNamespace>
-    <AssemblyName>Homework_05</AssemblyName>
+    <RootNamespace>Homework_05_01</RootNamespace>
+    <AssemblyName>Homework_05_01</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Matrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
