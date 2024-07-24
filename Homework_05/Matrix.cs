@@ -13,9 +13,10 @@ namespace Homework_05
         /// <summary>
         /// Умножение числа на матрицу
         /// </summary>
-        public void MatrixMltiplyByNum(int matrixRow, int matrixColumn, int matrixNumMultiplier)   
+        public void MatrixMltiplyByNum(int[,] matrix, int matrixNumMultiplier)   
         {
-            int[,] matrix = new int[matrixRow, matrixColumn];           // Создаем матрицу по заданым значениям
+            int matrixRow = matrix.GetLength(0);
+            int matrixColumn = matrix.Length / matrixRow;           // Создаем матрицу по заданым значениям
             
             Console.Clear();
             Console.SetCursorPosition(0, matrixRow / 2);                // Центровка числа в консоли
@@ -60,10 +61,13 @@ namespace Homework_05
         /// <summary>
         /// Сложение матриц 
         /// </summary>
-        public void MatrixAddMatrix(int matrixRow, int matrixColumn, int matrixRow1, int matrixColumn1)                     
+        public void MatrixAddMatrix(int[,] matrix, int[,] matrix1)                     
         {
-            int[,] matrix = new int[matrixRow, matrixColumn];            // Первая матрица пользователя 
-            int[,] matrix1 = new int[matrixRow1, matrixColumn1];         // Вторая матрица пользователя 
+            int matrixRow = matrix.GetLength(0);
+            int matrixColumn = matrix.Length / matrixRow;
+            int matrixRow1 = matrix1.GetLength(0);
+            int matrixColumn1 = matrix1.Length / matrixRow1;
+
             int[,] matrixAdd = new int[matrixRow, matrixColumn];         // Матрица после сложения
 
             Console.Clear();            
@@ -128,10 +132,13 @@ namespace Homework_05
         /// <summary>
         /// Вычитание матриц
         /// </summary>
-        public void MatrixSubMatrix(int matrixRow, int matrixColumn, int matrixRow1, int matrixColumn1)
+        public void MatrixSubMatrix(int[,] matrix, int[,] matrix1)
         {
-            int[,] matrix = new int[matrixRow, matrixColumn];            // Первая матрица пользователя 
-            int[,] matrix1 = new int[matrixRow1, matrixColumn1];         // Вторая матрица пользователя 
+            int matrixRow = matrix.GetLength(0);
+            int matrixColumn = matrix.Length / matrixRow;
+            int matrixRow1 = matrix1.GetLength(0);
+            int matrixColumn1 = matrix1.Length / matrixRow1;
+
             int[,] matrixSub = new int[matrixRow, matrixColumn];         // Матрица после вычитания
 
             Console.Clear();
@@ -197,10 +204,13 @@ namespace Homework_05
         /// <summary>
         /// Умножение матрицы на матрицу
         /// </summary>
-        public void MatrixMultiplyMatrix(int matrixRow, int matrixColumn, int matrixRow1, int matrixColumn1)
+        public void MatrixMultiplyMatrix(int[,] matrix, int[,] matrix1)
         {
-            int[,] matrix = new int[matrixRow, matrixColumn];            // Первая матрица пользователя 
-            int[,] matrix1 = new int[matrixRow1, matrixColumn1];         // Вторая матрица пользователя 
+            int matrixRow = matrix.GetLength(0);
+            int matrixColumn = matrix.Length / matrixRow;
+            int matrixRow1 = matrix1.GetLength(0);
+            int matrixColumn1 = matrix1.Length / matrixRow1;
+
             int[,] matrixMul = new int[matrixRow, matrixColumn1];
             
             Console.Clear();

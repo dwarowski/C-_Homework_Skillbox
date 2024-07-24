@@ -40,10 +40,13 @@ namespace Homework_05
                 int matrixRow = int.Parse(Console.ReadLine());                  // Считываем кол-во рядов
                 Console.Write("Введите количество колонок матрицы, но не больше 18: ");
                 int matrixColumn = int.Parse((Console.ReadLine()));             // Считываем кол-во колонок 
+
+
                 Console.Write("Введите число на которое надо умножить, но не больше 10 000: ");
                 int matrixNumMultiplier = int.Parse(Console.ReadLine());    // Число на которое будет умножатся матрица
+                int[,] matrixs = new int[matrixRow, matrixColumn];
 
-                matrix.MatrixMltiplyByNum(matrixRow, matrixColumn, matrixNumMultiplier);          
+                matrix.MatrixMltiplyByNum(matrixs, matrixNumMultiplier);          
                 Main(args);                     // Перезапуск
             } // Умножение матрицы на число
 
@@ -60,7 +63,10 @@ namespace Homework_05
                 Console.Write("Введите количество колонок второй матрицы: ");
                 int matrixColumn1 = int.Parse((Console.ReadLine()));             // Считываем кол-во колонок второй матрицы
 
-                matrix.MatrixAddMatrix(matrixRow, matrixColumn, matrixRow1, matrixColumn1);     
+                int[,] matrixs = new int[matrixRow, matrixColumn];
+                int[,] matrixs1 = new int[matrixRow1, matrixColumn1];
+
+                matrix.MatrixAddMatrix(matrixs, matrixs1);     
                 Main(args);                     // Перезапуск              
             } // Сложение двух матриц
 
@@ -76,7 +82,10 @@ namespace Homework_05
                 Console.Write("Введите количество колонок второй матрицы: ");
                 int matrixColumn1 = int.Parse((Console.ReadLine()));             // Считываем кол-во колонок второй матрицы
 
-                matrix.MatrixSubMatrix(matrixRow, matrixColumn, matrixRow1, matrixColumn1);
+                int[,] matrixs = new int[matrixRow, matrixColumn];
+                int[,] matrixs1 = new int[matrixRow1, matrixColumn1];
+
+                matrix.MatrixSubMatrix(matrixs, matrixs1);
                 Main(args);
             } // Вычитание двух матриц
             
@@ -92,7 +101,10 @@ namespace Homework_05
                 Console.Write("Введите количество колонок второй матрицы: ");
                 int matrixColumn1 = int.Parse((Console.ReadLine()));             // Считываем кол-во колонок второй матрицы
 
-                matrix.MatrixMultiplyMatrix(matrixRow, matrixColumn, matrixRow1, matrixColumn1);
+                int[,] matrixs = new int[matrixRow, matrixColumn];
+                int[,] matrixs1 = new int[matrixRow1, matrixColumn1];
+
+                matrix.MatrixMultiplyMatrix(matrixs, matrixs1);
                 Main(args);
             } // Умножжение матрицы на матрицу
         }
