@@ -37,7 +37,7 @@ namespace Homework_05_01
                 int maxLengthWord = words.Max(w => w.Length);   // Ищем максимальную длину слова
                 string[] maxWords = new string[words.Length];
                 
-                foreach (string word in words)          // Ищем все подходящие в массиве и добовляем в выводной массив
+                foreach (string word in words)          // Ищем все подходящие в массиве и добавляем в выводной массив
                 {
                     if (word.Length == maxLengthWord)
                     {
