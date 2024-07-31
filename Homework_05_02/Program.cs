@@ -11,26 +11,28 @@ namespace Homework_05_02
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine();
+            Console.Write("Введите свою строку: ");     // Вывод сообщения о вводе
+            string input = Console.ReadLine();          // Считывание введеной строки 
 
-            Console.WriteLine(InputString(input));
-            Console.ReadKey();
+            Console.WriteLine(StringSeparator(input));  // Вывод работы метода
+            Console.ReadKey();                          // Ожидание для просмотра
 
 
-            string InputString(string inputString)
+            string StringSeparator(string inputString)
             {
-                string outputString = "";
-                char prevLetter = ' ';
-
-                foreach (char letter in inputString)
+                string outputString = "";                            // Пустая строка для вывода
+                
+                for (int i = 0; i < inputString.Length - 1; i++)     // Цикл перебора всех букв 
                 {
-                    if (prevLetter != letter)
+                    if (inputString.ToUpperInvariant()[i] != inputString.ToUpperInvariant()[i + 1]) // Если следущая буква другая -> 
                     {
-                        outputString += letter;
+                        outputString += inputString[i];              // -> Добавляй текущую букву в выводную строку 
                     }
-                    prevLetter = letter;
                 }
-                return outputString;
+
+                outputString += inputString[inputString.Length - 1]; // Добавляем последнюю букву в строке 
+
+                return outputString;                                 // Возвращаем выводную строку
             }
         }
     }
