@@ -11,35 +11,34 @@ namespace Homework_05_04
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите два параметра через пробел: ");
-            string inputParams = Console.ReadLine();
-            string[] inputParamsSplit = inputParams.Split(' ');
-            int[] intParams = Array.ConvertAll(inputParamsSplit, int.Parse);
+            Console.Write("Введите два параметра через пробел: ");           // Вывод строки для пользователя 
+            string inputParams = Console.ReadLine();                         // Считывание строки
+            string[] inputParamsSplit = inputParams.Split(' ');              // Разделение строки на строки по пробелам
+            int[] intParams = Array.ConvertAll(inputParamsSplit, int.Parse); // Перевод в числа из строк
 
 
-            Console.WriteLine(Acckermans(intParams[0], intParams[1]));
+            Console.WriteLine(Acckermans(intParams[0], intParams[1]));       // Вызов функции с задаными параметрами 
 
-            Console.ReadKey();
+            Console.ReadKey();                                               // Ожидание ввода
 
             int Acckermans(int n, int m)
             {
-                if (n < 0 || m < 0)
-                {
-                    return 0;
-                }
 
                 if (n == 0)
                 {
-                    return m++;
+                    return m+=1;
                 }
 
-                if (n >= 0 && m == 0)
+                else if (n > 0 && m == 0)
                 {
                     return Acckermans(n - 1, 1);
                 }
-
+                else
+                {
+                    return Acckermans(n - 1, Acckermans(n, m - 1));
+                }
                
-                return Acckermans(n - 1, Acckermans(n, m - 1));
+                
             }
         }
     }
