@@ -10,17 +10,19 @@ namespace Homework_06
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 50; i++)
+            for (int i = 1; i < 11; i++)
             {
 
-                for (int j = 0; j < 50; j++)
+                for (int j = 1; j < 11; j++)
                 {
-                    if(i % 10)
+                    if(i % j == 0)
                     {
-
+                        Console.Write($"{i} ");
+                        Console.WriteLine(j);
                     }
                 }
             }
+            Console.ReadKey();
 
         }
     }
